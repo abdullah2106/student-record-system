@@ -9,18 +9,18 @@ class Student
    
     string name;
     int age {};
-    float CGPA;
+    float cgpa;
     
   public:
     
     string Name() {return name;}
     int Age() {return age;}
-    float Cgpa() {return CGPA;}
+    float Cgpa() {return cgpa;}
 
-    Student(string studentName, float studentGpa, int studentage) 
+    Student(string studentName, float studentcgpa, int studentage) 
     {
         name = studentName;
-        CGPA = studentGpa;
+        cgpa = studentcgpa;
         age = studentage;
     }
 
@@ -28,12 +28,12 @@ class Student
     {
         cout<< "Name= " << name << endl;
         cout<< "Age= " << age << endl;
-        cout<< "CGPA= " << CGPA << endl;
+        cout<< "CGPA= " << cgpa << endl;
     }
 
-    void setGpa(float newCGpa) {
-    if (newCGpa >= 0.0 && newCGpa <= 4.0) {
-        CGPA = newCGpa;
+    void setCgpa(float newCgpa) {
+    if (newCgpa >= 0.0 && newCgpa <= 4.0) {
+        cgpa = newCgpa;
     } else {
         cout << "Invalid GPA. Must be between 0.0 and 4.0." << endl;
     }
@@ -44,7 +44,7 @@ int main()
 {
     Student s1 ("Waxir", 2.2, 23);
    
-    s1.setGpa(-3.9); 
+    s1.setCgpa(-3.9); 
 
    s1.Print();
 
