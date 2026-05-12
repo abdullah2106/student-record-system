@@ -30,14 +30,23 @@ class Student
         cout<< "Age= " << age << endl;
         cout<< "CGPA= " << CGPA << endl;
     }
+
+    void setGpa(float newCGpa) {
+    if (newCGpa >= 0.0 && newCGpa <= 4.0) {
+        CGPA = newCGpa;
+    } else {
+        cout << "Invalid GPA. Must be between 0.0 and 4.0." << endl;
+    }
+}
 };
 
 int main()
 {
-    Student s1 ("Waxir", 22, 2.8);
-    s1.Print();
+    Student s1 ("Waxir", 2.2, 23);
+   
+    s1.setGpa(-3.9); 
 
-  
+   s1.Print();
 
    // s1.CGPA = -99.0;
 //cout << s1.CGPA << endl;
